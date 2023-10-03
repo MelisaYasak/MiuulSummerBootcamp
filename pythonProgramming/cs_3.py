@@ -46,3 +46,14 @@ for c in titanic.columns:
 print(titanic.columns)
 titanic = titanic.drop("who", axis=1)
 print(titanic.columns)
+
+# Task 13: Fill the empty values in the deck variable with the most repetitive value (mode) of the deck variable.
+print(titanic["deck"])
+print(" The most recurring value of the deck variable: ", titanic["deck"].mode())
+titanic["deck"].fillna(titanic["deck"].mode()[0], inplace=True)
+print(titanic["deck"])
+
+# Task 14: Fill the empty values in the age variable with the median of the age variable.
+print("median of age variable: ", titanic["age"].median())
+titanic["age"].fillna(titanic["age"].median(), inplace= True)
+print(titanic["age"])
