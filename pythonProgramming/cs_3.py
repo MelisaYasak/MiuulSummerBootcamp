@@ -57,3 +57,7 @@ print(titanic["deck"])
 print("median of age variable: ", titanic["age"].median())
 titanic["age"].fillna(titanic["age"].median(), inplace= True)
 print(titanic["age"])
+
+# Task 15: Find the sum, count, mean values of the survived variable in the breakdown of pclass and gender variables.
+result = titanic.groupby(['pclass', 'sex'])['survived'].agg(['sum', 'count', 'mean'])
+print(result)
