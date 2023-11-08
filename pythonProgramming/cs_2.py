@@ -11,7 +11,7 @@ print(comp) # ['NUM_TOTAL', 'NUM_SPEEDING', 'NUM_ALCOHOL', 'NUM_NOT_DISTRACTED',
 import seaborn as sns
 df = sns.load_dataset("car_crashes")
 df.columns
-comp = new_columns = [column.upper() + "_FLAG" if not "no" in column else column.upper() for column in df.columns]
+comp = [column.upper() + "_FLAG" if not "no" in column else column.upper() for column in df.columns]
 print(comp) # ['TOTAL_FLAG', 'SPEEDING_FLAG', 'ALCOHOL_FLAG', 'NOT_DISTRACTED', 'NO_PREVIOUS', 'INS_PREMIUM_FLAG', 'INS_LOSSES_FLAG', 'ABBREV_FLAG']
 
 
